@@ -20,6 +20,8 @@
     "reverse_mapping": true
   },
   "outbounds": [
+    {"tag": "流量多", "type": "urltest", "url": "https://www.google.com/", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["XYZ"]}], "interval": "10m", "tolerance": 150},
+    {"tag": "流量少", "type": "urltest", "url": "https://chatgpt.com/", "outbounds": ["{all}"], "filter": [{"action": "include", "keywords": ["SakuraCat"]}], "interval": "10m", "tolerance": 150},
     {"tag": "🚀 默认代理", "type": "selector", "outbounds": ["🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择", "♻️ 自动选择"]},
     {"tag": "🧠 AI", "type": "selector", "outbounds": ["🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动"]},
     {"tag": "📹 YouTube", "type": "selector", "outbounds": ["🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
